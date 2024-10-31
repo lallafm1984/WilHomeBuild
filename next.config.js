@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  assetPrefix:
+    process.env.NODE_ENV === "production"
+      ? "https://lallafm1984.github.io/wilHomeBuild"
+      : "",
   images: {
     unoptimized: true,
   },
